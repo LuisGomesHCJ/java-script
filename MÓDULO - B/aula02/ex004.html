@@ -18,9 +18,13 @@
     <p> Já me livrei da maldição</p>
 
     <script>  
-        var nome = prompt('Qual o seu nome')
-        var salario = Number(prompt(`Quantos você recebe, ${nome}?`))
-        document.write(`Olá ${nome}. Você recebe ${salario.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})}`)
+        var nome = prompt('Qual o seu nome') /* Variável (var) nome vai receber (=) a resposta do (prompt) */
+
+        var salario = Number(prompt(`Quantos você recebe, ${nome}?`)) /* Variável (var) salario vai receber (=) a resposta do prompt e converter em numero (Number) */
+        
+        document.write(`Olá ${nome}. Você recebe ${salario.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})}`) /* (document.write) vai mostrar na tela o (var nome), e o salário do usuário (var salario) */
+
+        /* -> .toLocaleString('pt-BR', {style: 'currency', currency: 'BRL' <-   vai transformar a variável salario em moeda brasileira. */
     </script>
 </body>
 </html>
