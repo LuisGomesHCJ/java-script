@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu primeiro script</title>
+    <style>
+        body {
+            background-color: aliceblue;
+            color: darkblue;
+            font: normal 20pt arial, sans-serif;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <script>  
+        var nome = prompt('Qual o seu nome?')
+        var idade = prompt(`Olá ${nome}, quantos anos você tem?`)
+        var ano = 2025 - idade
+
+        document.write(`<h1> Olá ${nome} </h1> Como você tem ${idade} anos, <br/> você nasceu no ano de ${ano}`)
+
+    </script>
+</body>
+</html>
