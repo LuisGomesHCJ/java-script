@@ -41,7 +41,7 @@
 </head>
 <body>
     <header>
-        <h1> Iniciando estudos DOM</h1>
+        <h1>DOM com QuerySelector</h1>
     </header>
     <article id="um">
         <p>Aqui vai o resultado</p>
@@ -55,14 +55,11 @@
     <!-- ------------------ JAVA --------------------->
 
     <script>
-        var p1 = document.getElementsByTagName('p')[0]
-        document.write(`Está escrito assim: ${p1.innerHTML}`)
-        
-        var c = document.getElementById('click')
-        c.style.background = 'green'
-        c.innerText = 'Calma ai paizão'
-        
-        
+        var caixa = document.querySelector('div#click')
+        caixa.style.background = 'red'
+
+        var paragr = document.querySelector('p')
+        paragr.style.background = 'blue'
     </script>
 </body>
 </html>
