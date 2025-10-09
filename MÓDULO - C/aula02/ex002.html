@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somando Números</title>
+    <style>
+        * {
+            font-family: Arial, Helvetica, sans-serif;
+            
+        }
+        input {
+            width: 75px;
+            font-size: 1.2em;
+        }
+        div {
+            font-size: 1.2em;
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Somando Valores</h1>
+    <input type="number" name="txt1" id="txt1"> +
+    <input type="number" name="txt2" id="txt2">
+    <input type="button" value="Somar" onclick="somar()"> <!-- onclick para usar na function -->
+
+    <div id="resultado">Resultado</div>
+
+    <script>
+        function somar() {  // Define a função chamada somar, que será executada quando o botão for clicado.
+
+            var caixa1 = document.getElementById('txt1')          // caixa1 agora representa o input com ID "text1"
+            var caixa2 = document.querySelector('input#txt2')     // caixa2 agora representa o input com ID "text2"
+            var resposta = document.getElementById('resultado')   // Utiliza a <div id="resultado"> para o resultado final da soma.
+            var num1 = Number(caixa1.value)                       // Pega o valor digitado no input 1 (caixa1.value) e converte para número usando Number().
+            var num2 = Number(caixa2.value)                       // Mesma coisa para o segundo input.
+            var res = num1 + num2                                 // Faz a soma dos dois números e guarda em res
+        
+            resposta.innerHTML = ` A soma entre ${num1} e ${num2} é igual a <strong>${res}</strong> `
+        }
+    </script>
+</body>
+</html>
