@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>País</title>
+    <style>
+
+        * {
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.5em;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+
+            border: 1px solid red;
+            padding: 15px;
+            max-width: 700px;
+            margin: auto;
+            margin-bottom: 15px;
+        }
+
+        div#resultado {
+            max-width: 500px;
+            margin: auto;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Qual a sua Nacinalidade</h1>
+
+    <form action="post">
+        
+        <div class="nome">
+            <label for="inome">Seu Nome:</label>
+            <input type="text" name="nome" id="inome" required placeholder="Seu Nome">
+        </div>
+
+
+        <div class="pais">
+            <label for="ipais">Seu país de origem:</label>
+            <select name="pais" id="ipais">
+                <option value="">Escolha o seu País</option>
+                <option value="Brasil">Brasil</option>
+                <option value="Estados Unidos">Estados Unidos</option>
+                <option value="Japão">Japão</option>
+                <option value="Koreia">Koreia</option>
+                <option value="Canadá">Canadá</option>
+                <option value="China">China</option>
+                <option value="Egito">Egito</option>
+                <option value="Rússia">Rússia</option>
+            </select>
+        </div>
+        
+        <input type="button" value="Enviar" onclick="enviar()">
+    </form>
+
+    <div id="resultado"></div>
+
+
+    <script>
+        function enviar() {
+            var n = document.getElementById('inome')
+            var pais = document.getElementById('ipais')
+            var result = document.getElementById('resultado')
+
+            var nome = n.value
+            var nacion = pais.value
+
+            result.innerHTML = `Olá ${nome}, você veio do ${nacion} <br>`
+
+            if (nacion != 'Brasil') {
+                result.innerHTML += `Você é estrangeiro, não é bem-vindo...`
+            } else {
+                result.innerHTML += `Então você é Brasileiro. <br> Seja bem-vindo, ${nome}!!`
+            }
+        }
+    </script>
+</body>
+</html>

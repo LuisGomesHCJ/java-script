@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detran</title>
+    <style>
+        * {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        input#ipt1 {
+            width: 50px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Sistema de Multas</h1>
+    
+    Velocidade do automóvel: <input type="number" name="vel" id="ipt1"> Km/h
+    <input type="button" value="Verificar" onclick="verificar()">
+    <div id="result"></div>
+
+    <script>
+        
+
+        
+        function verificar() {
+
+        var input1 = document.getElementById('ipt1')
+        var res = document.getElementById('result')
+        var velocidade = Number(input1.value)
+        res.innerHTML = `<p> Sua velocidade é de ${velocidade}Km/h </p>`
+
+        if (velocidade > 60) {
+            res.innerHTML += '<p> Você está ultrapassando a velocidade permitida. Será multado!! </p>'
+        } else {
+            res.innerHTML += '<p> Velocidade permitida. Siga sua viagem com cuidado!! </p> '
+        }
+    }
+        
+    </script>
+</body>
+</html>
