@@ -38,6 +38,37 @@ div#identidade {
     padding: 15px;
 }
 
+div.preencher {
+    padding: 5px;
+}
+#verif-botao {
+    background: linear-gradient(45deg, #1fddff, #f81fff);
+    background-size: 200% 200%; /* necessário p/ animação */
+    color: #ffffff;
+    border-radius: 7px;
+    border: none;
+    margin: 5px;
+    padding: 10px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    animation: gradientMove 5s ease infinite alternate;
+}
+
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+#verif-botao:active {
+    transform: scale(0.95);
+}
+
+
+
 
 footer {
     color: #ffffff;
