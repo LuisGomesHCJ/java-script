@@ -36,6 +36,7 @@ function verificar() {
                 gênero = `Idoso`
             }
         }
+
         else if (gen[1].checked){
             
             if (idade >= 0 && idade < 12){
@@ -66,14 +67,6 @@ function verificar() {
         result.innerHTML = `Você é um(a) ${gênero} de ${idade} anos`
         result.appendChild(img)
     }
-
-
-
-
-
-
-
-
 }
 
 
