@@ -8,18 +8,21 @@
 </head>
 <body>
     <header>
-        <h1>Vamos começar a contagem</h1>
+        <h1>Tabuada</h1>
     </header>
     <section>
         <div id="dados">
-            <p>Inicio:  <input type="number" name="ini" id="inicio"></p>
-            <p>Fim: <input type="number" name="f" id="fim"></p>
-            <p>Passo: <input type="number" name="pas" id="passo"></p>
-            <p><input type="button" value="Contar" onclick="contar()"></p>
+            <p>Número: 
+                <input type="number" name="num" id="numero">
+                <input type="button" value="Gerar Tabuada" onclick="gerar()">
+            </p>
+            
         </div>
 
         <div id="result">
-            Preparando a contagem...
+           <select name="tabuada" id="tab" size="10">
+                <option>Digite um valor acima</option>
+           </select>
         </div>
     </section>
 
